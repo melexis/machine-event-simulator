@@ -19,7 +19,6 @@ public class MessageSenderActiveMQ {
         session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         Destination queue = session.createQueue(endpoint);
         producer = session.createProducer(queue);
-
     }
 
 

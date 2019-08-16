@@ -32,5 +32,11 @@ If ok you should see the following:
 
 ## how to run
 
-Machines are generating event and publish them on JMS topic called machine.event.
+From your favorite IDE (like intellij), just run the class GeneratorMain with following arguments:
+
+    tcp://localhost:61616 machine.event 100
+
+This will connect to local activemq server you started and generator on queue machine.event 500 messages with random timing between each of few seconds that simulates the normal load expected on production.
+
+TODO: add debug option to also consume messages and print them.
 
