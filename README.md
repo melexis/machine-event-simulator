@@ -1,10 +1,10 @@
 # machine-event-simulator
 
-This is dummy project to generate dummy events from hypothetic machines to do some technical tests of new employee
+This is dummy project to generate dummy events from fake machines to do some technical tests of new employee
 
 # how to use
 
-## prerequesite
+## prerequisite
 
 You need to have [java8](https://openjdk.java.net/install/) or above installed on your computer. 
 
@@ -34,9 +34,11 @@ If ok you should see the following:
 
 From your favorite IDE (like intellij), just run the class GeneratorMain with following arguments:
 
-    tcp://localhost:61616 machine.event 100
+    tcp://localhost:61616 machine.event 10 150
 
-This will connect to local activemq server you started and generator on queue machine.event 500 messages with random timing between each of few seconds that simulates the normal load expected on production.
+This will connect to local activemq server you started and generator on queue machine.event 10 messages with random timing between each of few seconds that simulates the normal load expected on production for 150 machines given as parameter (which is roughly the amount of running machines on our production floor).
 
-TODO: add debug option to also consume messages and print them.
+If add debug at end of command then it will consume the produced message (to confirm setup is working fine):
+    
+    tcp://localhost:61616 machine.event 10 150 debug
 

@@ -13,7 +13,7 @@
     <artifactId>machine-event-simulator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>machine-event-simulator</name>
-    <description>Generator of hypothetic machine events</description>
+    <description>Simulator of machine events</description>
 
     <properties>
         <java.version>1.8</java.version>
