@@ -7,7 +7,6 @@ import javax.jms.JMSException;
 import java.time.LocalDateTime;
 import java.util.Random;
 
-@SuppressWarnings("ALL")
 class GeneratorMain {
 
     private static final int ACTIVEMQ_SERVER_URL = 0;
@@ -43,8 +42,8 @@ class GeneratorMain {
         if (args.length==5 && DEBUG_KEY.equals(args[DEBUG_ARG_POS])) {
             debug = true;
         }
-        int amountOfEvents = Integer.valueOf(args[AMOUNT_OF_EVENTS_TO_GENERATE]);
-        int machineCount = Integer.valueOf(args[MACHINE_COUNT]);
+        int amountOfEvents = Integer.parseInt(args[AMOUNT_OF_EVENTS_TO_GENERATE]);
+        int machineCount = Integer.parseInt(args[MACHINE_COUNT]);
         //assuming each machine makes a message every 10mns:
         int meanTimeBetweenMachinesEvents = 10 * 60 / machineCount;
         MessageHandler messageHandler = new MessageHandler();
